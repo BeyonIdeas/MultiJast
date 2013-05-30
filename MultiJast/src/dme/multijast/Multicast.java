@@ -58,7 +58,7 @@ public class Multicast {
 	        socket.receive(inPacket);
 	        String msg = new String(inBuf, 0, inPacket.getLength());
 //	        return ""+inPacket.getAddress()+" : " + msg+"\n";
-	        return msg;
+	        return msg+"\n";
 	  
 	      }
 	      

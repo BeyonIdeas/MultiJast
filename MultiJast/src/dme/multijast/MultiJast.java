@@ -49,6 +49,7 @@ public class MultiJast extends JFrame implements ActionListener, KeyListener{
 	//About messages
 	private static final String about = 
 			"<html>" +
+			"<body>" +
 			"<hr>" +
 			"<h3>&nbsp;MultiJast&nbsp</h3>" +
 			"<p>Sends multicast messages to all<br>" +
@@ -62,6 +63,8 @@ public class MultiJast extends JFrame implements ActionListener, KeyListener{
 			"<hr>" +
 			"<p>&nbsp;BeyonIdeas&nbsp<br>" +
 			"<p>&nbsp;www.beyonideas.com&nbsp</p>" +
+			"<hr>" +
+			"</body>" +
 			"</html>";
 	
 	/* Menu */
@@ -317,7 +320,10 @@ public class MultiJast extends JFrame implements ActionListener, KeyListener{
 					
 					@Override
 					public void run() {
-						Multicast.sendMulticast(jtf.getText(), IPADDR, PORT);
+						SimpleDateFormat date = new SimpleDateFormat("dd-MM-yyyy HH:mm");
+						String time = date.format(new Time(System.currentTimeMillis()));
+						String os = System.getProperty("os.name");
+						Multicast.sendMulticast(nickname+" with "+os+" at "+time+":\n"+jtf.getText()+"\n", IPADDR, PORT);
 						jtf.setText(" ");
 						
 					}
