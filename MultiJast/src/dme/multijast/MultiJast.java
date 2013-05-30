@@ -55,7 +55,7 @@ public class MultiJast extends JFrame implements ActionListener, KeyListener{
 			"computers in the local network.&nbsp" +
 			"<p>&nbsp;It's sent to 224.0.0.1:8888</p>" +
 			"<hr>" +
-			"<p>&nbsp;Version: 1.0&nbsp</p>" +
+			"<p>&nbsp;Version: 1.0-dev&nbsp</p>" +
 			"<p>&nbsp;Date: 2013&nbsp</p>" +
 			"<p>&nbsp;Author: David Ervideira&nbsp</p>" +
 			"<p>&nbsp;Contact: david.ervideira@beyonideas.com&nbsp</p>" +
